@@ -1,13 +1,16 @@
 from flask import Flask, render_template, redirect, flash, request, send_file, send_from_directory, session, url_for
-from flask_sqlalchemy import Flask
+from flask_sqlalchemy import SQLAlchemy
 from config import *
 import secrets
 import psycopg2
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:senha@hostname:port/nome_do_banco_de_dados'
-db = SQLAlchemy(app)
+# Configuração da primeira conexão ao banco de dados
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://admin:0FgeMTgVOt74NjHIHPTGVr4xwkQeYPOK@dpg-cipk1td9aq0dcpqkq3hg-a.oregon-postgres.render.com/database_bemchique'
+
+# Configuração da segunda conexão ao banco de dados (URL interna)
+app.config['SQLALCHEMY_BINDS'] = {'internal_db': 'postgres://admin:0FgeMTgVOt74NjHIHPTGVr4xwkQeYPOK@dpg-cipk1td9aq0dcpqkq3hg-a/database_bemchique'}
 
 # Define a rota principal para o usuario
 @app.route("/")
@@ -86,6 +89,7 @@ def carrinho():
 def blog():
     return render_template('estrutura/blog.html')
 
+db = SQLAlchemy(app)
 if __name__ == '__main__':
     # Cria as tabelas no banco de dados
     db.create_all()
