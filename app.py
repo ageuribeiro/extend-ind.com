@@ -1,8 +1,9 @@
 from flask import Flask, render_template, redirect, flash, request, send_file, send_from_directory, session, url_for
 from flask_sqlalchemy import SQLAlchemy
+import psycopg2
 from config import *
 import secrets
-import psycopg2
+
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
