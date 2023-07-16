@@ -1,16 +1,21 @@
 from flask import Flask, render_template, redirect, flash, request, send_file, send_from_directory, session, url_for
+from flask_sqlalchemy import Flask
 from config import *
 import secrets
+import psycopg2
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:senha@hostname:port/nome_do_banco_de_dados'
+db = SQLAlchemy(app)
 
 # Define a rota principal para o usuario
 @app.route("/")
 def home():
+    categorias = ['Blusas', 'Camisetas', 'Saias', 'Sapatos', 'Relógios', 'Maquiagem', 'Promoções']
     return render_template(
         "index.html", 
+        categorias=categorias,
         title='Showcase',
         endereco_loja=endereco_loja,
         texto_destaque=texto_destaque,
@@ -82,4 +87,8 @@ def blog():
     return render_template('estrutura/blog.html')
 
 if __name__ == '__main__':
+    # Cria as tabelas no banco de dados
+    db.create_all()
+
+    # Inicia o servidor flask
     app.run(debug=True, port=9000)

@@ -10,13 +10,9 @@
                         <span>Categorias</span>
                     </div>
                     <ul>
-                        <li><a href="#">Blusas</a></li>
-                        <li><a href="#">Camisetas</a></li>
-                        <li><a href="#">Saias</a></li>
-                        <li><a href="#">Sapatos</a></li>
-                        <li><a href="#">Relógios</a></li>
-                        <li><a href="#">Maquiagem</a></li>
-                        <li><a href="#">Promoções</a></li>
+                        {% for categoria in categorias %}
+                            <li><a href="#">{{ categoria }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -43,7 +39,7 @@
                 <div class="hero__item set-bg" data-setbg="{{url_for('static', filename='img/img_bc/banner_bemchique.jpeg')}}" id="img-banner">
                     <div class="hero__text">
                         <span>{{ nome_loja }}</span>
-                        <h2>Produtos de<br />Primeira Linha</h2>
+                        <h2>Produtos de</br>Primeira Linha</h2>
                         <p>Aqui você encontra os melhores preços!!</p>
                         <a href="{{'/produtos'}}" class="primary-btn">COMPRAR AGORA</a>
                     </div>

@@ -32,13 +32,21 @@
 
 html,
 body {
-	background-color: #f4ebeb;
 	height: 100%;
 	font-family: "Cairo", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;	
 }
-
+.background-container{
+	background: linear-gradient(to right, black, black), url("/static/img/img_bc/bemchique_background.jpeg") no-repeat fixed;
+	background-size: 50% auto, cover;
+	filter:grayscale(100%);
+}
+.content{
+	max-width: 960px;
+	margin:0 auto;
+	padding: 20px;
+	color:white;
+}
 h1,
 h2,
 h3,
@@ -168,8 +176,9 @@ ol {
 	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 700;
-	background: #eedcdb;
+	background: #1E6F5C;
 	letter-spacing: 2px;
+	margin-top: 110px;
 }
 
 .site-btn {
@@ -251,12 +260,12 @@ ol {
   Header
 -----------------------*/
 
-.header__top {
+.header_top {
 	background: #f5f5f5;
 }
 
 .header__top__left {
-	padding: 10px 0 13px;
+	padding: 7px 0 13px;
 }
 
 .header__top__left ul li {
@@ -798,7 +807,7 @@ ol {
 	position: absolute;
 	left: -35px;
 	top: 50%;
-	-webkit-transform: translateY(-35px);
+	transform: translateY(-35px);
 	background: #ffffff;
 }
 
@@ -2987,9 +2996,7 @@ ol {
 		right: 15px;
 		top: 22px;
 	}
-	.header .container {
-		position: relative;
-	}
+
 	.humberger__menu__wrapper {
 		width: 300px;
 		background: #ffffff;
@@ -3191,7 +3198,7 @@ ol {
 		position: relative;
 		left: 0;
 		top: 0;
-		-webkit-transform: translateY(0);
+		transform: translateY(0);
 	}
 	.categories__slider.owl-carousel .owl-nav button.owl-next {
 		right: -10px;
@@ -3245,7 +3252,7 @@ ol {
 		right: 15px;
 		top: 22px;
 	}
-	.header .container {
+	.header{
 		position: relative;
 	}
 	.humberger__menu__wrapper {
