@@ -1,18 +1,14 @@
 from flask import Flask, render_template, redirect, flash, request, send_file, send_from_directory, session, url_for
 from flask_sqlalchemy import SQLAlchemy
-import psycopg2
 from config import *
 import secrets
-
+import requests
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
-# Configuração da primeira conexão ao banco de dados
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://admin:0FgeMTgVOt74NjHIHPTGVr4xwkQeYPOK@dpg-cipk1td9aq0dcpqkq3hg-a.oregon-postgres.render.com/database_bemchique'
 
-# Configuração da segunda conexão ao banco de dados (URL interna)
-app.config['SQLALCHEMY_BINDS'] = {'internal_db': 'postgres://admin:0FgeMTgVOt74NjHIHPTGVr4xwkQeYPOK@dpg-cipk1td9aq0dcpqkq3hg-a/database_bemchique'}
-
+# URL do Firebase Realtime Database
+url = f''
 # Define a rota principal para o usuario
 @app.route("/")
 def home():
@@ -92,8 +88,6 @@ def blog():
 
 db = SQLAlchemy(app)
 if __name__ == '__main__':
-    # Cria as tabelas no banco de dados
-    db.create_all()
 
     # Inicia o servidor flask
     app.run(debug=True)
