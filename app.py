@@ -86,7 +86,6 @@ def carrinho():
 def blog():
     return render_template('estrutura/blog.html')
 
-db = SQLAlchemy(app)
 if __name__ == '__main__':
 
     # Inicia o servidor flask
