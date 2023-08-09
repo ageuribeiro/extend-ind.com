@@ -1,10 +1,9 @@
 /******************************************************************
-  Template Name: Ogani
-  Description:  Ogani eCommerce  HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
+  Template Name: Bem Chique
+  Description:  Bem Chique E-commerce HTML Template
+  Author: Ageu Ribeiro
   Version: 1.0
-  Created: Colorlib
+  Created: Ageu Ribeiro
 ******************************************************************/
 
 /*------------------------------------------------------------------
@@ -30,23 +29,14 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 html,
 body {
 	height: 100%;
-	font-family: "Cairo", sans-serif;
-	-webkit-font-smoothing: antialiased;	
+	font-family: "Montserrat", sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
-.background-container{
-	background: linear-gradient(to right, black, black), url("/static/img/img_bc/bemchique_background.jpeg") no-repeat fixed;
-	background-size: 50% auto, cover;
-	filter:grayscale(100%);
-}
-.content{
-	max-width: 960px;
-	margin:0 auto;
-	padding: 20px;
-	color:white;
-}
+
 h1,
 h2,
 h3,
@@ -55,8 +45,8 @@ h5,
 h6 {
 	margin: 0;
 	color: #111111;
-	font-weight: 400;
-	font-family: "Cairo", sans-serif;
+	font-weight: 300;
+	font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -85,9 +75,9 @@ h6 {
 
 p {
 	font-size: 16px;
-	font-family: "Cairo", sans-serif;
-	color: #6f6f6f;
-	font-weight: 400;
+	font-family: "Montserrat", sans-serif;
+	color: #6c757d;
+	font-weight: 300;
 	line-height: 26px;
 	margin: 0 0 15px 0;
 }
@@ -138,7 +128,7 @@ ol {
 	right: 0;
 	height: 4px;
 	width: 80px;
-	background: #eedcdb;
+	background: #6c757d;
 	content: "";
 	margin: 0 auto;
 }
@@ -173,12 +163,11 @@ ol {
 	display: inline-block;
 	font-size: 14px;
 	padding: 10px 28px 10px;
-	color: #ffffff;
+	color: #6c757d;
 	text-transform: uppercase;
 	font-weight: 700;
-	background: #1E6F5C;
+	background: #EEDCDB;
 	letter-spacing: 2px;
-	margin-top: 110px;
 }
 
 .site-btn {
@@ -188,10 +177,12 @@ ol {
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 13px 30px 12px;
-	background: #eedcdb;
+	background: #6c757d;
 	border: none;
 }
-
+.header{
+	background: #EEDCDB;
+}
 /* Preloder */
 
 #preloder {
@@ -260,12 +251,12 @@ ol {
   Header
 -----------------------*/
 
-.header_top {
-	background: #f5f5f5;
+.header__top {
+	background: #EEDCDB;
 }
 
 .header__top__left {
-	padding: 7px 0 13px;
+	padding: 10px 0 13px;
 }
 
 .header__top__left ul li {
@@ -459,7 +450,7 @@ ol {
 }
 
 .header__menu ul li .header__menu__dropdown li:hover>a {
-	color: #eedcdb;
+	color: #6c757d;
 }
 
 .header__menu ul li .header__menu__dropdown li a {
@@ -470,7 +461,7 @@ ol {
 }
 
 .header__menu ul li.active a {
-	color: #eedcdb;
+	color: #6c757d;
 }
 
 .header__menu ul li:hover .header__menu__dropdown {
@@ -480,7 +471,7 @@ ol {
 }
 
 .header__menu ul li:hover>a {
-	color: #eedcdb;
+	color: #6c757d;
 }
 
 .header__menu ul li:last-child {
@@ -534,7 +525,7 @@ ol {
 .header__cart ul li a span {
 	height: 13px;
 	width: 13px;
-	background: #eedcdb;
+	background: #6c757d;
 	font-size: 10px;
 	color: #ffffff;
 	line-height: 13px;
@@ -710,7 +701,7 @@ ol {
 
 .hero__search__phone__icon {
 	font-size: 18px;
-	color: #eedcdb;
+	color: #6c757d;
 	height: 50px;
 	width: 50px;
 	background: #f5f5f5;
@@ -737,7 +728,7 @@ ol {
 }
 
 .hero__item {
-	height: 650px;
+	height: 431px;
 	display: flex;
 	align-items: center;
 	padding-left: 75px;
@@ -748,7 +739,7 @@ ol {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 4px;
-	color: #eedcdb;
+	color: #6c757d;
 }
 
 .hero__text h2 {
@@ -850,7 +841,7 @@ ol {
 	bottom: -2px;
 	width: 100%;
 	height: 2px;
-	background: #eedcdb;
+	background: #6c757d;
 	content: "";
 	opacity: 0;
 }
@@ -898,8 +889,8 @@ ol {
 }
 
 .featured__item__pic__hover li:hover a {
-	background: #eedcdb;
-	border-color: #eedcdb;
+	background: #6c757d;
+	border-color: #6c757d;
 }
 
 .featured__item__pic__hover li:hover a i {
@@ -977,7 +968,7 @@ ol {
 .latest-product__slider.owl-carousel .owl-nav button {
 	height: 30px;
 	width: 30px;
-	background: #eedcdb;
+	background: #F3F6FA;
 	border: 1px solid #e6e6e6;
 	font-size: 14px;
 	color: #636363;
@@ -1334,8 +1325,8 @@ ol {
 }
 
 .product__item__pic__hover li:hover a {
-	background: #eedcdb;
-	border-color: #eedcdb;
+	background: #6c757d;
+	border-color: #6c757d;
 }
 
 .product__item__pic__hover li:hover a i {
@@ -1533,7 +1524,7 @@ ol {
 }
 
 .filter__option span:hover {
-	color: #eedcdb;
+	color: #6c757d;
 }
 
 .product__item {
@@ -1574,8 +1565,8 @@ ol {
 }
 
 .product__item__pic__hover li:hover a {
-	background: #eedcdb;
-	border-color: #eedcdb;
+	background: #6c757d;
+	border-color: #6c757d;
 }
 
 .product__item__pic__hover li:hover a i {
@@ -1655,8 +1646,8 @@ ol {
 
 .product__pagination a:hover,
 .blog__pagination a:hover {
-	background: #eedcdb;
-	border-color: #eedcdb;
+	background: #6c757d;
+	border-color: #6c757d;
 	color: #ffffff;
 }
 
@@ -2164,8 +2155,8 @@ ol {
 }
 
 .checkout__input__checkbox label input:checked~.checkmark {
-	background: #eedcdb;
-	border-color: #eedcdb;
+	background: #6c757d;
+	border-color: #6c757d;
 }
 
 .checkout__input__checkbox label input:checked~.checkmark:after {
@@ -2392,7 +2383,7 @@ ol {
 }
 
 .blog__sidebar__item ul li a:hover {
-	color: #eedcdb;
+	color: #6c757d;
 }
 
 .blog__sidebar__search {
@@ -2612,7 +2603,7 @@ ol {
 }
 
 .blog__details__widget .blog__details__social a:hover {
-	color: #eedcdb;
+	color: #6c757d;
 }
 
 .blog__details__widget .blog__details__social a:last-child {
@@ -2730,7 +2721,7 @@ ol {
 }
 
 .footer__widget .footer__widget__social a:hover {
-	background: #eedcdb;
+	background: #6c757d;
 	color: #ffffff;
 	border-color: #ffffff;
 }
@@ -2768,7 +2759,7 @@ ol {
 
 .contact__widget span {
 	font-size: 36px;
-	color: #eedcdb;
+	color: #6c757d;
 }
 
 .contact__widget h4 {
@@ -2807,7 +2798,7 @@ ol {
 
 .map .map-inside i {
 	font-size: 48px;
-	color: #eedcdb;
+	color: #6c757d;
 	position: absolute;
 	bottom: -75px;
 	left: 50%;
@@ -2996,7 +2987,9 @@ ol {
 		right: 15px;
 		top: 22px;
 	}
-
+	.header .container {
+		position: relative;
+	}
 	.humberger__menu__wrapper {
 		width: 300px;
 		background: #ffffff;
@@ -3062,7 +3055,7 @@ ol {
 	.humberger__menu__cart ul li a span {
 		height: 13px;
 		width: 13px;
-		background: #eedcdb;
+		background: #6c757d;
 		font-size: 10px;
 		color: #ffffff;
 		line-height: 13px;
@@ -3128,7 +3121,7 @@ ol {
 		-webkit-border-radius: 0;
 		border-radius: 0;
 		background: transparent;
-		color: #eedcdb;
+		color: #3990ad;
 	}
 	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
 	.humberger__menu__wrapper .slicknav_nav a {
@@ -3252,7 +3245,7 @@ ol {
 		right: 15px;
 		top: 22px;
 	}
-	.header{
+	.header .container {
 		position: relative;
 	}
 	.humberger__menu__wrapper {
@@ -3320,7 +3313,7 @@ ol {
 	.humberger__menu__cart ul li a span {
 		height: 13px;
 		width: 13px;
-		background: #eedcdb;
+		background: #3990ad;
 		font-size: 10px;
 		color: #ffffff;
 		line-height: 13px;
@@ -3386,7 +3379,7 @@ ol {
 		-webkit-border-radius: 0;
 		border-radius: 0;
 		background: transparent;
-		color: #eedcdb;
+		color: #3990ad;
 	}
 	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
 	.humberger__menu__wrapper .slicknav_nav a {
@@ -3480,10 +3473,37 @@ ol {
 	font-size:40px;
 }
 
-#img-banner{
-	width: auto;
-	height: 500px;
-	top: -150px;
-	background-position: center -200px;
-
+.bg-rosa-claro{
+    background-color: #F4EBEB;
 }
+
+.bg-rosa-blush{
+    background-color: #EEDCDB;
+}
+
+.bg-dourado{
+    background:linear-gradient(to right, #B0A172, #FDEFEA);
+}
+
+.bg-facebook{
+    background-color: #1877F2;
+}
+.color-facebook{
+	color: #1877F2;
+}
+.color-instagram{
+    color: #E4405F;
+}
+
+.color-whatsapp{
+    color: #25D366;
+}
+
+.bg-gmail{
+    background-color: #D14836;
+}
+
+.border-rounded-25{
+	border-radius: 25px;
+}
+

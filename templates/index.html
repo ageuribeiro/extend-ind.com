@@ -1,5 +1,4 @@
-{% include 'estrutura/cabecalho.html' %}
-<!-- Hero Section Begin -->
+{% include 'cabecalho.html' %}
 <section class="hero">
     <div class="container">
         <div class="row">
@@ -26,7 +25,7 @@
                         </form>
                     </div>
                     <div class="hero__search__phone">
-                        <div class="hero__search__phone__icon">
+                        <div class="hero__search__phone__icon bg-transparent">
                            <a class="text-info" target="_blank" href="http://api.whatsapp.com/send?1=pt_BR&phone={{ whatsapp_link }}" title="{{ whatsapp_link }}"><i class="fa fa-whatsapp"></i></a>
                         </div>
                         <div class="hero__search__phone__text">
@@ -36,7 +35,7 @@
                     </div>
                 </div>
                 <!---->
-                <div class="hero__item set-bg" data-setbg="{{url_for('static', filename='img/img_bc/banner_bemchique.jpeg')}}" id="img-banner">
+                <div class="hero__item set-bg border rounded bg-rosa-claro" data-setbg="{{url_for('static', filename='/imgs/t-shirt-pink-good-vibes_transparent.png')}}" id="img-banner">
                     <div class="hero__text">
                         <span>{{ nome_loja }}</span>
                         <h2>Produtos de</br>Primeira Linha</h2>
@@ -51,12 +50,12 @@
 <!-- Hero Section End -->
 
 <!-- Categories Section Begin -->
-<section class="categories">
+<!-- <section class="categories">
     <div class="container">
         <div class="row">
             <div class="categories__slider owl-carousel">
                 <div class="col-lg-3">
-                    <div class="categories__item set-bg" data-setbg="{{url_for('static', filename='img/categorias/cat-1.jpg')}}">
+                    <div class="categories__item set-bg" data-setbg="{{url_for('static', filename='/img/categorias/cat-1.jpg')}}">
                         <h5><a href="#">Camisa Social</a></h5>
                     </div>
                 </div>
@@ -88,7 +87,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Categories Section End -->
 
 <!-- Featured Section Begin -->
@@ -101,14 +100,9 @@
                 </div>
                 <div class="featured__controls">
                     <ul>
-                        <li class="active" data-filter="*">Todas</li>
-                        <li><a href="#">Blusas</a></li>
-                        <li><a href="#">Camisetas</a></li>
-                        <li><a href="#">Saias</a></li>
-                        <li><a href="#">Sapatos</a></li>
-                        <li><a href="#">Relógios</a></li>
-                        <li><a href="#">Maquiagem</a></li>
-                        <li><a href="#">Promoções</a></li>
+                        {% for categoria in categorias %}
+                            <li><a href="#">{{ categoria }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -116,7 +110,7 @@
         <div class="row featured__filter">
             <div class="col-lg-3 col-md-4 col-sm-6 mix sapatos fresh-meat">
                 <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="{{ url_for('static', filename='img/produtos/sapato-masculino.jpg') }}">
+                    <div class="featured__item__pic set-bg" data-setbg="{{url_for('static', filename='img/produtos/sapato-masculino.jpg')}}">
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-eye"></i></a></li>
                             <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
@@ -461,4 +455,4 @@
 </section>
 <!-- Latest Product Section End -->
 
-{% include 'estrutura/rodape.html' %}
+{% include 'rodape.html' %}
