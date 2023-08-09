@@ -19,4 +19,4 @@ banco = 'database_bemchique'
 # VARIÁVEIS DE AMBIENTE
 DEBUG = True
 SECRET_KEY = secrets.token_hex(16)
-DATABASE_URI = f'sqlite:///{banco}.db'
+DATABASE_URI = f'sqlite:///{banco}.sqlite'

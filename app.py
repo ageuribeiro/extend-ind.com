@@ -1,5 +1,7 @@
 from flask import Flask, render_template, redirect, flash, request, send_file, send_from_directory, session, url_for
-from flask_sqlalchemy import SQLAlchemy
+from database import db
+from flask_migrate import Migrate
+from usuarios import bp_usuarios
 import sqlite3
 import config
 import conexao
@@ -7,28 +9,16 @@ import secrets
 import requests
 
 app = Flask(__name__)
+
 app.config['DEBUG'] = config.DEBUG
 app.config['SECRET_KEY'] = config.SECRET_KEY 
 app.config['SQLALCHEMY_DATABASE_URI'] = config.DATABASE_URI
-db = SQLAlchemy(app)
+app.config['SQLALCHEMY_TRACKMODIFICATIONS'] = False
+app.register_blueprint(bp_usuarios, url_prefix='/novo_usuario')
 
+db.init_app(app)
 
-
-
-
-# Verificar Credenciais
-def verificar_credenciais(email_cpf, senha):
-    # Conexão com o banco de dados
-    conn = sqlite3.connect('bemchique_db.db')
-    cursor = conn.cursor()
-
-    # Verificar as credenciais
-    cursor.execute("SELECT * FROM usuarios WHERE email_cpf = ? AND senha = ?", (email_cpf, senha))
-    usuario = cursor.fetchone()
-
-    conn.close()
-    return usuario
-
+migrate = Migrate(app, db)
 
 # Define a rota principal para o usuario
 @app.route("/")
@@ -157,12 +147,24 @@ def cadastrar():
 
 
     return redirect(url_for('home'))
+# Verificar Credenciais
+def verificar_credenciais(email_cpf, senha):
+    # Conexão com o banco de dados
+    conn = sqlite3.connect('bemchique_db.db')
+    cursor = conn.cursor()
 
-with app.app_context():
-    #Cria o banco de dados
-    db.create_all()
+    # Verificar as credenciais
+    cursor.execute("SELECT * FROM usuarios WHERE email_cpf = ? AND senha = ?", (email_cpf, senha))
+    usuario = cursor.fetchone()
+
+    conn.close()
+    return usuario
 
 if __name__ == '__main__':
+
+    with app.app_context():
+        # Cria o banco de dados
+        db.create_all()
     
     # Inicia o servidor flask
     app.run(debug=True)
