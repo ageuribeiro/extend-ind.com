@@ -1,3 +1,5 @@
+import secrets
+
 # VARIÁVEIS GLOBAIS
 email = 'bemchiquemodaelegante@gmail.com'
 whatsapp_link ='5511977523331'
@@ -12,4 +14,9 @@ endereco_loja = 'www.bemchique.com.br'
 servidor = 'localhost'
 usuario = 'root'
 senha = ''
-banco = 'bemchique_db'
+banco = 'database_bemchique'
+
+# VARIÁVEIS DE AMBIENTE
+DEBUG = True
+SECRET_KEY = secrets.token_hex(16)
+DATABASE_URI = f'sqlite:///{banco}.db'

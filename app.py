@@ -7,16 +7,25 @@ import secrets
 import requests
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bemchique_db.db'
+app.config['DEBUG'] = config.DEBUG
+app.config['SECRET_KEY'] = config.SECRET_KEY 
+app.config['SQLALCHEMY_DATABASE_URI'] = config.DATABASE_URI
 db = SQLAlchemy(app)
-app.secret_key = secrets.token_hex(16)
 
-# Criando as classes
+
+# Criando a classe Usuario
 class Usuario(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email_cpf = db.Column(db.String(100), unique=True, nullable=False)
+    nome = db.column(db.String(80))
+    email = db.Column(db.String(100), unique=True, nullable=False)
+    cpf = db.Column(db.String(15), unique=True, nullable=False)
+    username = db.Column(db.String(80), unique=True, nullable=False)
     senha = db.Column(db.String(100), nullable=False)
 
+    def __repr__(self):
+        return f'<User {self.username}>'
+
+# Criando a classe Produto
 class Produto(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     cod = db.Column(db.String(50),nullable=False)
@@ -46,14 +55,15 @@ def home():
         "index.html", 
         categorias=categorias,
         title='Showcase',
-        endereco_loja=endereco_loja,
-        texto_destaque=texto_destaque,
-        whatsapp=whatsapp,
-        nome_loja=nome_loja,
-        whatsapp_link=whatsapp_link,
-        email=email,
-        telefone=telefone,
-        instagram_link=instagram_link)
+        endereco_loja=config.endereco_loja,
+        texto_destaque=config.texto_destaque,
+        whatsapp=config.whatsapp,
+        nome_loja=config.nome_loja,
+        whatsapp_link=config.whatsapp_link,
+        email=config.email,
+        telefone=config.telefone,
+        instagram_link=config.instagram_link
+        )
 
 # Define a rota principal para o Administrador
 @app.route("/admin")
@@ -99,6 +109,7 @@ def novidades():
 @app.route('/sistemas')
 def sistemas():
     title='Login'
+    nome_loja=config.nome_loja
     return render_template('sistema/index.html', title=title, nome_loja=nome_loja)
 
 # Define a rota para a página de Categorias
@@ -154,8 +165,12 @@ def cadastrar():
         email = request.form['email']
         cpf = request.form['cpf']
         senha = request.form['senha']
-        senha_cripto = request['confirma_senha']
-        print(nome, email, cpf, senha, senha_cripto)
+        senha_cripto = request.form['confirma_senha']
+
+        if senha == senha_cripto:
+            return flash("Registro bem-sucedido","success")
+        else:
+            return flash("As senhas não correspondem. Tente Novamente.","danger")
 
 
     return redirect(url_for('home'))

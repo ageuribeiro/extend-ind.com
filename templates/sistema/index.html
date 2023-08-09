@@ -1,4 +1,5 @@
-{% include 'base.html' %}
+{% include 'layout.html' %}
+{% block body %}
 <!DOCTYPE html>
 <html>
    <head>
@@ -82,36 +83,41 @@
          <div class="modal-body">
             <form action="{{url_for('cadastrar')}}" method="post" enctype="multipart/form-data">
                <div class="form-group">
-                  <label for="exampleInputEmail1">Nome Completo</label>
+                  <label for="nome">Nome Completo</label>
                   <input type="text" class="form-control" id="nome" name="nome" placeholder="Informe o seu Nome e Sobrenome">
                </div>
                <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
+                  <label for="email">Email</label>
                   <input type="email" class="form-control" id="email" name="email" placeholder="Seu Email">
                </div>
                <div class="form-group">
-                  <label for="exampleInputEmail1">CPF</label>
+                  <label for="cpf">CPF</label>
                   <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Informe seu CPF">
+               </div>
+               <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Informe seu nome de usuário">
                </div>
                <div class="row">
                   <div class="col-md-6">
                      <div class="form-group">
-                        <label for="exampleInputEmail1">Senha</label>
+                        <label for="senha">Senha</label>
                         <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
                      </div>
                   </div>
                   <div class="col-md-6">
                      <div class="form-group">
-                        <label for="exampleInputEmail1">Confirmar Senha</label>
+                        <label for="confirma_senha">Confirmar Senha</label>
                         <input type="password" class="form-control" id="confirma_senha" name="confirma_senha" placeholder="Confirme sua Senha">
                      </div>
                   </div>
                </div>
+               <div class="modal-footer">
+                  <input type="submit" class="btn btn-secondary" data-dismiss="modal" value="Fechar"/>
+                  <input type="submit" class="btn btn-primary" value="Cadastrar"/>
+               </div>
             </form>
-            <div class="modal-footer">
-               <input type="submit" class="btn btn-secondary" data-dismiss="modal" value="Fechar"/>
-               <input type="submit" id="btn-cadastrar" class="btn btn-primary" value="Cadastrar"/>
-            </div>
+            
          </div>
       </div>
    </div>
@@ -142,5 +148,6 @@
       </div>
    </div>
 </div>
+{% endblock %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 <script src="{{url_for('static', filename='/js/mascara.js') }}"></script>
