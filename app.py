@@ -13,25 +13,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = config.DATABASE_URI
 db = SQLAlchemy(app)
 
 
-# Criando a classe Usuario
-class Usuario(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    nome = db.column(db.String(80))
-    email = db.Column(db.String(100), unique=True, nullable=False)
-    cpf = db.Column(db.String(15), unique=True, nullable=False)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    senha = db.Column(db.String(100), nullable=False)
 
-    def __repr__(self):
-        return f'<User {self.username}>'
 
-# Criando a classe Produto
-class Produto(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    cod = db.Column(db.String(50),nullable=False)
-    nome = db.Column(db.String(100), nullable=False)
-    preco = db.Column(db.Float, nullable=False)
-    descricao = db.Column(db.Text, nullable=False)
 
 # Verificar Credenciais
 def verificar_credenciais(email_cpf, senha):
