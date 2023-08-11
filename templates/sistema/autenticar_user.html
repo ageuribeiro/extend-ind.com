@@ -1,0 +1,14 @@
+{% include 'layout.html' %}
+{% block content %}
+<main role="main" class="jambotron">
+    <div class="container text-center my-5">
+        <img src="{{ url_for('static', filename='imgs/logo_bemchique.jpg') }}"  width="150" alt="" class="rounded-circle my-3">
+        <h1 class="h3 display-4 my-5"><i class="fa fa-warning text-warning"></i> Aguarde...</h1>
+        <p class="lead my-5">Estamos verificando seus dados</p>
+        <p>{{ dados }}</p>
+        <p class="lead my-5">
+            <a href="{{url_for('home')}}" class="custom-button">Volte para a página inicial</a> ou <a href="{{url_for('sistemas')}}" class="custom-button"> Faça login novamente</a>
+        </p>
+    </div>
+</main>
+{% endblock %}

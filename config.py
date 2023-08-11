@@ -10,13 +10,12 @@ nome_loja = 'Boutique Bem Chique'
 texto_destaque = 'Produtos em Destaque!'
 endereco_loja = 'www.bemchique.com.br'
 
-# VARIÁVEIS DE ACESSO AO BANCO DE DADOS
-servidor = 'localhost'
-usuario = 'root'
-senha = ''
-banco = 'database_bemchique'
-
 # VARIÁVEIS DE AMBIENTE
 DEBUG = True
 SECRET_KEY = secrets.token_hex(16)
-DATABASE_URI = f'sqlite:///{banco}.sqlite'
+DATABASE_URI = 'sqlite:///database.db'
+
+# VARIÁVEIS DE SESSÃO
+SESSION_TYPE = 'filesystem'
+SESSION_PERMANENT = False
+SESSION_USER_SIGNER = True

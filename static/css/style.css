@@ -3510,3 +3510,7 @@ ol {
 .fs-produto-destaque{
 	font-size: smaller;
 }
+
+.custom-button:hover{
+	color: #333;
+}

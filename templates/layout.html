@@ -6,7 +6,6 @@
         <meta name="keywords" content="roupas femininas">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Bem Chique | {{ title }}</title>
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -22,6 +21,8 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" type="text/css">
         <link rel="shortcut icon" href="{{ url_for('static', filename='/imgs/logotipo/Simbolo-rose.png') }}" type="image/x-icon">
         <link rel="icon" href="{{ url_for('static', filename='/imgs/logotipo/Simbolo-rose.png') }}" type="image/x-icon">
+        
+        <title>Bem Chique | {{ title }}</title>
     </head>
     <body>
         <header class="header bg-rosa-blush">
@@ -40,16 +41,14 @@
                                 {% with messages=get_flashed_messages(with_categories=true) %}
                                     {% if messages %}
                                         {% for category, message in messages %}
-                                            <div class="alert alert-{{category}}">{{message}}</div>
+                                            <div class="alert alert-{{category}} small">{{message}}</div>
                                         {% endfor %}
-                                    {% endif %}
+                                    {% else %}
                                         <ul class="list-unstyled">
                                             <li class="fs-produto-destaque"><i class="fa fa-message"></i>{{ texto_destaque }}</li>
                                         </ul>
+                                    {% endif %}  
                                 {% endwith %}
-                                {% block body %}
-                        
-                                {% endblock %}
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
