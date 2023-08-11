@@ -194,12 +194,27 @@ def carrinho():
 def blog():
     return render_template('blog.html')
 
+with app.app_context():
+    inspector = inspect(db.engine)
+    if not inspector.has_table("user"):
+        db.create_all()
+
+    admin_username = config.ADMIN_USERNAME
+    admin_exists = User.query.filter_by(username=admin_username, profile='admin').first()
+
+    if not admin_exists:
+        admin_user = User(
+            name=config.ADMIN_NAME,
+            email=config.ADMIN_EMAIL,
+            username=admin_username,
+            senha=config.ADMIN_PASSWORD,
+            ativo=True,
+            profile='admin'
+        )
+
+        db.session.add(admin_user)
+        db.session.commit()
 
 if __name__ == '__main__':
-
-    with app.app_context():
-        inspector = inspect(db.engine)
-        if not inspector.has_table("user"):
-            db.create_all()
     app.run(debug=True)
     

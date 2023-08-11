@@ -19,3 +19,9 @@ DATABASE_URI = 'sqlite:///database.db'
 SESSION_TYPE = 'filesystem'
 SESSION_PERMANENT = False
 SESSION_USER_SIGNER = True
+
+# VARIAVEIS DO ADMINISTRADOR
+ADMIN_USERNAME = 'rayssasoares'
+ADMIN_NAME = 'Rayssa Soares'
+ADMIN_EMAIL = 'rayssanogueira2023@gmail.com'
+ADMIN_PASSWORD = 'bemchique2023'
