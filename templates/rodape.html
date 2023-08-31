@@ -7,10 +7,10 @@
                     <div class="footer__about__logo d-flex mx-auto justify-content-center">
                         <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='/imgs/logo_bemchique.jpg')}}" class="rounded-circle" width="120" alt="logotipo"></a>
                     </div>
-                    <ul class="mx-auto text-center">
+                    <ul class="mx-auto text-left">
                         <!-- <li><?php echo $endereco_loja ?></li> -->
-                        <li class="fs-1"><span class="font-weight-bold">Telefone: </span>{{ telefone }}</li>
-                        <li><span class="font-weight-bold">Email:</span> {{ email }}</li>
+                        <li class="fs-1"><span class="font-weight-bold"><i class="fa fa-phone"></i> </span>{{ telefone }}</li>
+                        <li><span class="font-weight-bold"><i class="fa fa-envelope"></i></span> {{ email }}</li>
                     </ul>
                 </div>
             </div>

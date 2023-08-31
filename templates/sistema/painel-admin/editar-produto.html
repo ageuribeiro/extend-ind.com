@@ -1,13 +1,13 @@
-<div class="modal fade" id="ModalPerfil" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ModalProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form id="form-perfil" method="POST" enctype="multipart/form-data">
+            <form action="" id="form-produto" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="form-group">
                         <label >Nome</label>
@@ -51,28 +51,3 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    $('#btn-salvar-perfil').click(function(event){
-        event.preventDefault();
-        
-        $.ajax({
-            url:"editar-perfil.php",
-            method:"post",
-            data: $('form').serialize(),
-            dataType: "text",
-            success: function(msg){
-                if(msg.trim() === 'Salvo com Sucesso!'){
-                                        
-                    $('#btn-fechar-perfil').click();
-                    window.location='index.php';
-                }
-                else{
-                    $('#mensagem-perfil').addClass('text-danger')
-                    $('#mensagem-perfil').text(msg);
-                   
-
-                }
-            }
-        });
-    });
-</script>

@@ -29,38 +29,43 @@
             <div class="header__top bg-rosa-claro">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-6 col-md-6">
                             <div class="header__top__left">
-                                <ul>
-                                    <li><i class="fa fa-envelope"></i> {{ email }}</li>
-                                </ul>
+                                <div class="container-fluid">
+                                    {% with messages=get_flashed_messages(with_categories=true) %}
+                                        {% if messages %}
+                                            {% for category, message in messages %}
+                                                <div class="alert alert-{{category}} small">{{message}}</div>
+                                            {% endfor %}
+                                        {% else %}
+                                            <ul class="list-unstyled">
+                                                <li class="fs-produto-destaque"><i class="fa fa-message"></i>{{ texto_destaque }}</li>
+                                            </ul>
+                                        {% endif %}  
+                                    {% endwith %}
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="container-fluid pt-3">
-                                {% with messages=get_flashed_messages(with_categories=true) %}
-                                    {% if messages %}
-                                        {% for category, message in messages %}
-                                            <div class="alert alert-{{category}} small">{{message}}</div>
-                                        {% endfor %}
-                                    {% else %}
-                                        <ul class="list-unstyled">
-                                            <li class="fs-produto-destaque"><i class="fa fa-message"></i>{{ texto_destaque }}</li>
-                                        </ul>
-                                    {% endif %}  
-                                {% endwith %}
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="header__top__right">
-                                <div class="header__top__right__social">
-                                   <a target="_blank" title="Ir para página do Facebook" href="#"><i class="fa fa-facebook"></i></a>
-                                   <a target="_blank" title="Ir para página do Instagram" href="{{ instagram_link }}"><i class="fa fa-instagram"></i></a>
-                                   <a target="_blank" title="Enviar mensagem pelo whatsapp" href="http://api.whatsapp.com/send?1=pt_BR&phone={{ whatsapp_link }}" title="{{whatsapp}}"><i class="fa fa-whatsapp text-success"></i></a>
-                               </div>
-    
-                               <div class="header__top__right__auth">
-                                <a href="{{url_for('sistemas')}}"><i class="fa fa-user"></i> Login</a>
+                        
+                        <div class="col-lg-6 col-md-6">
+                            <div class="row my-3">
+                                <div class="col-lg-6 col-md-6 text-right">
+                                    <div class="header__top__right__social">
+                                        <a target="_blank" title="Enviar email para bemchiquemodaelegante@gmail.com" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWslzCwlFwTlvwchpvrFGcMbNqwxSTDWFhpMGCMRfTPmMsZvnLDRrsqPGqvzWHhmBjlbmXVHG"><i class="fa fa-envelope"></i></a>
+                                        <a target="_blank" title="Ir para página do Facebook" href="https://www.facebook.com/bemchiques2023"><i class="fa fa-facebook"></i></a>
+                                        <a target="_blank" title="Ir para página do Instagram" href="{{ instagram_link }}"><i class="fa fa-instagram"></i></a>
+                                        <a target="_blank" title="Enviar mensagem pelo whatsapp" href="http://api.whatsapp.com/send?1=pt_BR&phone={{ whatsapp_link }}" title="{{whatsapp}}"><i class="fa fa-whatsapp text-success"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="header__top__right__auth">
+                                        {% if username %}
+                                            <p> Olá, <span class="font-weight-bold">{{ username }}</span> <a href="{{url_for('logout')}}" class="font-weight-bold"><i class="fa fa-user-slash"></i> Logout</a></p>  
+                                        {% else %}
+                                            <a href="{{url_for('sistemas')}}" class="font-weight-bold"><i class="fa fa-user"></i> Login</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
