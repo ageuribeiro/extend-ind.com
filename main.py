@@ -1,8 +1,8 @@
-# main.py
-
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
 import config
+from flask import Flask
+
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__, template_folder='/interfaces/templates')
 app.config.from_pyfile('config.py')
