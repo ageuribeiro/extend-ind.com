@@ -1,0 +1,25 @@
+{% include 'layout.html' %}
+
+{% block content %}
+<section class="index">
+    <div class="row">
+        <div class="col-lg-10 col-md-12 col-sm-12">           
+            <div class="hero__item set-bg bg-rosa-claro" data-setbg="{{url_for('static', filename='/imgs/t-shirt-pink-good-vibes_transparent.png')}}" id="img-banner">
+                <div class="hero__text">
+                    <span>{{ nome_loja }}</span>
+                    <h2>Produtos de</br>Primeira Linha</h2>
+                    <p>Aqui você encontra os melhores preços!!</p>
+                    <a href="{{'/produtos'}}" class="primary-btn">COMPRAR AGORA</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="row">
+        Aqui sera novidades
+    </div> 
+    <div class="row">
+        Aqui sera promocoes
+    </div> 
+</section>
+{% endblock %}
+{% include 'rodape.html' %}

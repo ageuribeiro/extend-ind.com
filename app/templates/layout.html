@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Venda de Roupas Feminina">
+        <meta name="keywords" content="roupas femininas">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.min.css')}}" type="text/css" media="all">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/font-awesome.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/elegant-icons.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/nice-select.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/jquery-ui.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/owl.carousel.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/slicknav.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" type="text/css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='/imgs/logotipo/Simbolo-rose.png') }}" type="image/x-icon">
+        <link rel="icon" href="{{ url_for('static', filename='/imgs/logotipo/Simbolo-rose.png') }}" type="image/x-icon">
+        
+        <title>Bem Chique | {{ title }}</title>
+    </head>
+    <body>
+        <main>
+            <div class="container-fluid bg-rosa-blush" >
+                <div class="container">
+                    <div class="row bg-rosa-blush">
+                        <div class="col-lg-3">
+                            <div class="header__logo d-flex mx-auto align-items-center justify-content-center">
+                                <a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='imgs/logo_bemchique.jpg') }}"  width="120" alt="" class="rounded-circle"></a>
+                                <a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='imgs/logo_bemchique.jpg') }}"  width="120" alt="" class="rounded-circle"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                            <nav class="navbar navbar-expand-lg bg-transparent header__menu">
+                                <ul>
+                                    <li class="active"><a class="nav-link" href="{{url_for('home')}}">Início</a></li>
+                                    <li><a href="{{url_for('sobre')}}">Sobre</a></li>
+                                    <li><a href="#">Produtos</a>
+                                        <ul class="header__menu__dropdown">
+                                            <li><a href="{{url_for('lista_produtos')}}">Todos Produtos</a></li>
+                                            <li><a href="{{url_for('mais_vendidos')}}">Mais Vendidos</a></li>
+                                            <li><a href="{{url_for('promotions')}}">Promoções</a></li>
+                                            <li><a href="{{url_for('combos')}}">Combos</a></li>
+                                            <li><a href="{{url_for('novidades')}}">Novidades</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{url_for('blog')}}">Blog</a></li>
+                                
+                                    <li><a href="{{url_for('contatos')}}">Contatos</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="header__cart">
+                                <ul>
+                                    <li><a href="{{url_for('carrinho')}}"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                                </ul>
+                                <div class="header__cart__price">item: <span>R$150,00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="humberger__open">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        <!-- <header class="header bg-rosa-blush">
+            <div class="header__top bg-rosa-claro">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__top__left">
+                                <div class="container-fluid">
+                                    {% with messages=get_flashed_messages(with_categories=true) %}
+                                        {% if messages %}
+                                            {% for category, message in messages %}
+                                                <div class="alert alert-{{category}} small">{{message}}</div>
+                                            {% endfor %}
+                                        {% else %}
+                                            <ul class="list-unstyled">
+                                                <li class="fs-produto-destaque"><i class="fa fa-message"></i>{{ texto_destaque }}</li>
+                                            </ul>
+                                        {% endif %}  
+                                    {% endwith %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header> -->
+
+        <div class="container-fluid m-0 p-0">
+            
+            {% block content %}
+            {% endblock %}
+            
+        </div>
+    </body>
+</html>

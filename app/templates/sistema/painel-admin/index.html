@@ -1,0 +1,147 @@
+<body>
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-12">
+            <main class="d-flex flex-nowrap bg-dark">
+                <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+                    <a href="{{url_for('painel_admin', admin=user.id) }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <img src="../../imgs/logo_bemchique.jpg" alt="" width="120" class="rounded-circle">
+                        <p class="text-center"><span class="fs-4">Bem Chique</span></p>
+                    </a>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto text-justify">
+                        <li class="nav-link">
+                            <a href="{{url_for('painel_admin', admin=user.id) }}" class="nav-link text-white" ><i class="fa fa-home mx-2" width="16" height="16"></i>Home</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-bar-chart mx-2" width="16" height="16"></i>Dashboard</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-shopping-cart mx-2" width="16" height="16"></i>Pedidos</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-th mx-2" width="16" height="16"></i>Produtos</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-users mx-2" width="16" height="16"></i>Clientes</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-truck mx-2" width="16" height="16"></i>Fornecedores</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-industry mx-2" width="16" height="16"></i>Fabricantes</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-folder mx-2" width="16" height="16"></i>Categorias</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-tags mx-2" width="16" height="16"></i>Combos</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-bullhorn mx-2" width="16" height="16"></i>Promoções</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-users mx-2" width="16" height="16"></i>Clientes</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-shopping-cart mx-2" width="16" height="16"></i>Vendas</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-pencil mx-2" width="16" height="16"></i>Blog</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-user mx-2" width="16" height="16"></i>Usuários</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-link text-white"><i class="fa fa-cog mx-2" width="16" height="16"></i>Configurações</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="row my-3">
+                                <div class="col">
+                                    <div class="header__top__right__auth">
+                                        {% if username %}
+                                            <small><span class="font-weight-bold text-light">{{ username }}</span><a href="{{url_for('logout')}}" class="font-weight-bold"><i class="fa fa-user-slash"></i> Logout</a></small>  
+                                            <div class="dropdown d-inline">
+                                                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                                                    <strong>{{ username }}</strong>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                                </ul>
+                                            </div>
+                                            
+                                        {% else %}
+                                            <a href="{{url_for('sistemas')}}" class="font-weight-bold"><i class="fa fa-user"></i>Login</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="col-lg-8 col-md-6 col-sm-12">
+            <div class="row">
+                <div class="content" id="infoDiv"></div>
+            </div> 
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 border-start">
+            <div class="row"><h4>Mensagens</h4></div>
+            <div class="row"><h4>Telegram</h4></div>
+            <div class="row"><h4>whatsapp</h4></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalNovoProduto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> Cadastrar Novo Produto</h4>
+                    <button type="button" class="close btn btn-danger" data-dimiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="modalContent"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-btn-secondary" data-dimiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="static/js/sidebars.js"></script>
+    <script>
+        function loadContent(url){
+            $.ajax({
+                url:url,
+                method:"GET",
+                success: function(response) {
+                    document.getElementById("content").innerHTML = response;
+                },
+    
+                error: function(){
+                    document.getElementById("content").innerHTML ="Erro ao carregar o conteúdo da página";
+                }
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.nav-link').click(function(){
+                var linkText = $(this).text();
+                var info = getInformation(linkText);
+                $("#infoDiv").load(info);
+            });
+        });
+    </script>
+</body>
