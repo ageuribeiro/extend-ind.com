@@ -1,12 +1,13 @@
-from flask import Flask
-from infraestrutura.database import db
+# main.py
 
-app = Flask(__name__)
+from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
+import config
+
+app = Flask(__name__, template_folder='/interfaces/templates')
 app.config.from_pyfile('config.py')
-
-
-# Inicializar o SQLAlchemy
-db.init_app(app)
+app.debug = True
+db = SQLAlchemy(app)
 
 if __name__ == '__main__':
     app.run(debug=True)

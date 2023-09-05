@@ -1,6 +1,9 @@
-from flask_sqlalchemy import SQLAlchemy
-import sqlite3
-from datetime import *
+# models.py
+
+from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, BLOB, Boolean
+from sqlalchemy.orm import relationship
+from datetime import datetime
+import db  # Certifique-se de importar o objeto db do seu aplicativo Flask
 
 db = SQLAlchemy()
 
