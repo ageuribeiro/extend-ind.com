@@ -7,17 +7,14 @@ from src.domain.models.users import Users
 class UsersRepository(UsersRepositoryInterface):
 
     @classmethod
-    def insert_user(cls, name:str, username:str, email:str, senha:str, profile:str, ativo:bool)->None:
+    def insert_user(cls, name:str, username:str)->None:
         with DBConnectionHandler() as database:
 
             try:
                 new_registry = UsersEntity(
                     name=name,
                     username=username,
-                    email=email,
-                    senha=senha,
-                    profile=profile,
-                    ativo=ativo
+                   
                 )
                 database.session.add(new_registry)
                 database.session.commit()

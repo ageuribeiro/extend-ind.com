@@ -1,2 +1,2 @@
 # BemChique
- E-Commerce de Roupas 
+ E-commerce de Roupas.
