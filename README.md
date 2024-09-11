@@ -1,2 +1,3 @@
-# BemChique
- E-commerce de Roupas.
+# Site Institucional para a Empresa Extend Industria Metalurgica
+Site Institucional desenvolvido em PHP com MySQL 
+
