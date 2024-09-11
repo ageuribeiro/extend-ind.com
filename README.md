@@ -1,10 +1,6 @@
-Aqui está um modelo de documentação para o arquivo `README.md` de um site institucional simples, utilizando princípios de design SOLID, com a estrutura de *clean architecture* e detalhes sobre a tecnologia usada:
+# Site Institucional - Extend Industria Metalúrgica
 
----
-
-# Site Institucional - Empresa Exemplo
-
-Este repositório contém o código-fonte para o site institucional da **Empresa Exemplo**, desenvolvido em **C#.NET** utilizando a **Clean Architecture**, com a apresentação em **PHP** e **ASP.NET Core**, e com **Bootstrap** para a estilização da interface. O banco de dados utilizado é o **MySQL**.
+Este repositório contém o código-fonte para o site institucional da **Extend Industria Metalúrgica**, desenvolvido em **C#.NET** utilizando a **Clean Architecture**, com a apresentação em **PHP** e **ASP.NET Core**, e com **Bootstrap** para a estilização da interface. O banco de dados utilizado é o **MySQL**.
 
 ## Objetivo do Projeto
 
@@ -49,7 +45,7 @@ O projeto foi estruturado de forma a separar a lógica em camadas:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/empresa-exemplo/site-institucional.git
+git clone https://github.com/ageuribeiro/extend-ind.com.git
 ```
 
 2. Instale as dependências do projeto backend (C#.NET):
