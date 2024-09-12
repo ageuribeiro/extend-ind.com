@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ExtendInd.InfraStructure/1.0.0": {
+        "runtime": {
+          "ExtendInd.InfraStructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ExtendInd.InfraStructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

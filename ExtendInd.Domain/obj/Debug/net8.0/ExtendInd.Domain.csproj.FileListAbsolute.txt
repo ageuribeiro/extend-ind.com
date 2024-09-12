@@ -1,0 +1,12 @@
+C:\http\extend-ind.com\ExtendInd.Domain\bin\Debug\net8.0\ExtendInd.Domain.deps.json
+C:\http\extend-ind.com\ExtendInd.Domain\bin\Debug\net8.0\ExtendInd.Domain.dll
+C:\http\extend-ind.com\ExtendInd.Domain\bin\Debug\net8.0\ExtendInd.Domain.pdb
+C:\http\extend-ind.com\ExtendInd.Domain\obj\Debug\net8.0\ExtendInd.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\http\extend-ind.com\ExtendInd.Domain\obj\Debug\net8.0\ExtendInd.Domain.AssemblyInfoInputs.cache
+C:\http\extend-ind.com\ExtendInd.Domain\obj\Debug\net8.0\ExtendInd.Domain.AssemblyInfo.cs
+C:\http\extend-ind.com\ExtendInd.Domain\obj\Debug\net8.0\ExtendInd.Domain.csproj.CoreCompileInputs.cache
+C:\http\extend-ind.com\ExtendInd.Domain\obj\Debug\net8.0\ExtendInd.Domain.sourcelink.json
+C:\http\extend-ind.com\ExtendInd.Domain\obj\Debug\net8.0\ExtendInd.Domain.dll
+C:\http\extend-ind.com\ExtendInd.Domain\obj\Debug\net8.0\refint\ExtendInd.Domain.dll
+C:\http\extend-ind.com\ExtendInd.Domain\obj\Debug\net8.0\ExtendInd.Domain.pdb
+C:\http\extend-ind.com\ExtendInd.Domain\obj\Debug\net8.0\ref\ExtendInd.Domain.dll

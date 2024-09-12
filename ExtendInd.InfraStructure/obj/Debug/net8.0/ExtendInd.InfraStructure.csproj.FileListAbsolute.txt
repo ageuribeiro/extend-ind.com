@@ -1,0 +1,12 @@
+C:\http\extend-ind.com\ExtendInd.InfraStructure\bin\Debug\net8.0\ExtendInd.InfraStructure.deps.json
+C:\http\extend-ind.com\ExtendInd.InfraStructure\bin\Debug\net8.0\ExtendInd.InfraStructure.dll
+C:\http\extend-ind.com\ExtendInd.InfraStructure\bin\Debug\net8.0\ExtendInd.InfraStructure.pdb
+C:\http\extend-ind.com\ExtendInd.InfraStructure\obj\Debug\net8.0\ExtendInd.InfraStructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\http\extend-ind.com\ExtendInd.InfraStructure\obj\Debug\net8.0\ExtendInd.InfraStructure.AssemblyInfoInputs.cache
+C:\http\extend-ind.com\ExtendInd.InfraStructure\obj\Debug\net8.0\ExtendInd.InfraStructure.AssemblyInfo.cs
+C:\http\extend-ind.com\ExtendInd.InfraStructure\obj\Debug\net8.0\ExtendInd.InfraStructure.csproj.CoreCompileInputs.cache
+C:\http\extend-ind.com\ExtendInd.InfraStructure\obj\Debug\net8.0\ExtendInd.InfraStructure.sourcelink.json
+C:\http\extend-ind.com\ExtendInd.InfraStructure\obj\Debug\net8.0\ExtendInd.InfraStructure.dll
+C:\http\extend-ind.com\ExtendInd.InfraStructure\obj\Debug\net8.0\refint\ExtendInd.InfraStructure.dll
+C:\http\extend-ind.com\ExtendInd.InfraStructure\obj\Debug\net8.0\ExtendInd.InfraStructure.pdb
+C:\http\extend-ind.com\ExtendInd.InfraStructure\obj\Debug\net8.0\ref\ExtendInd.InfraStructure.dll
