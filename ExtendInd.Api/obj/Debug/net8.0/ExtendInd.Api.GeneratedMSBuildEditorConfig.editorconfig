@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\http\extend-ind.com\ExtendInd.Api
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/http/extend-ind.com/ExtendInd.Api/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +32,42 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/http/extend-ind.com/ExtendInd.Api/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/ResearchandDevelopment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZWFyY2hhbmREZXZlbG9wbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/Service.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/Shared/_About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/Shared/_Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9FcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/Shared/_Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/Shared/_Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Qcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/Shared/_ResearchandDevelopment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9SZXNlYXJjaGFuZERldmVsb3BtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/http/extend-ind.com/ExtendInd.Api/Pages/Shared/_Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9TZXJ2aWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/http/extend-ind.com/ExtendInd.Api/Pages/Shared/_ValidationScriptsPartial.cshtml]

@@ -90,7 +90,12 @@ O projeto será expandido para incluir um **CRM** completo com controle de:
 - Gestão de conteúdo de redes sociais
 
 Acesso ao CRM será restrito a usuários autenticados e autorizados. Novas funcionalidades serão adicionadas seguindo os mesmos princípios de SOLID e Clean Architecture.
-
+## Erros corrigidos
+No decorrer do projeto ocorreram algumas dificuldades.
+ - Primeiro Erro:
+ ```bash
+      InvalidOperationException: The partial view '/Index' was not found. The following locations were searched:
+      /Index
 ## Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma **issue** ou enviar um **pull request** com melhorias ou correções.

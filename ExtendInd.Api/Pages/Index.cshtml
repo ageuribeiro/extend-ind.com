@@ -1,10 +1,20 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home Page";
 }
 
+@{
+    var pageToLoad = ViewData["PageToLoad"] ?? "_Index"; // Load 'Index' by Default
+}
+
+<div class="container">
+    <main class="pb-3" role="main">
+        @await Html.PartialAsync((string)pageToLoad) <!-- Load the PartialAsync View dynamic mode-->
+    </main>
+</div>
 <div class="text-center">
+   
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p class="">Pushing the boundaries of aerospace technology. <a href="https://learn.microsoft.com/aspnet/core">Discover the future with us</a>.</p>
 </div>
