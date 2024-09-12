@@ -96,6 +96,7 @@ No decorrer do projeto ocorreram algumas dificuldades.
  ```bash
       InvalidOperationException: The partial view '/Index' was not found. The following locations were searched:
       /Index
+      
 ## Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma **issue** ou enviar um **pull request** com melhorias ou correções.

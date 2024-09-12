@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\http\\extend-ind.com\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C3CFE79-3337-4F07-A85D-9376047B3178}|ExtendInd.Api\\ExtendInd.Api.csproj|c:\\http\\extend-ind.com\\extendind.api\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C3CFE79-3337-4F07-A85D-9376047B3178}|ExtendInd.Api\\ExtendInd.Api.csproj|solutionrelative:extendind.api\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C3CFE79-3337-4F07-A85D-9376047B3178}|ExtendInd.Api\\ExtendInd.Api.csproj|c:\\http\\extend-ind.com\\extendind.api\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C3CFE79-3337-4F07-A85D-9376047B3178}|ExtendInd.Api\\ExtendInd.Api.csproj|solutionrelative:extendind.api\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C3CFE79-3337-4F07-A85D-9376047B3178}|ExtendInd.Api\\ExtendInd.Api.csproj|c:\\http\\extend-ind.com\\extendind.api\\pages\\about.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C3CFE79-3337-4F07-A85D-9376047B3178}|ExtendInd.Api\\ExtendInd.Api.csproj|solutionrelative:extendind.api\\pages\\about.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C3CFE79-3337-4F07-A85D-9376047B3178}|ExtendInd.Api\\ExtendInd.Api.csproj|c:\\http\\extend-ind.com\\extendind.api\\pages\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2C3CFE79-3337-4F07-A85D-9376047B3178}|ExtendInd.Api\\ExtendInd.Api.csproj|solutionrelative:extendind.api\\pages\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\http\\extend-ind.com\\ExtendInd.Api\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "ExtendInd.Api\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\http\\extend-ind.com\\ExtendInd.Api\\Pages\\Index.cshtml",
+              "RelativeToolTip": "ExtendInd.Api\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T13:54:25.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\http\\extend-ind.com\\ExtendInd.Api\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ExtendInd.Api\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\http\\extend-ind.com\\ExtendInd.Api\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ExtendInd.Api\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T13:52:11.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "About.cshtml.cs",
+              "DocumentMoniker": "C:\\http\\extend-ind.com\\ExtendInd.Api\\Pages\\About.cshtml.cs",
+              "RelativeDocumentMoniker": "ExtendInd.Api\\Pages\\About.cshtml.cs",
+              "ToolTip": "C:\\http\\extend-ind.com\\ExtendInd.Api\\Pages\\About.cshtml.cs",
+              "RelativeToolTip": "ExtendInd.Api\\Pages\\About.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T13:52:04.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\http\\extend-ind.com\\ExtendInd.Api\\Pages\\About.cshtml",
+              "RelativeDocumentMoniker": "ExtendInd.Api\\Pages\\About.cshtml",
+              "ToolTip": "C:\\http\\extend-ind.com\\ExtendInd.Api\\Pages\\About.cshtml",
+              "RelativeToolTip": "ExtendInd.Api\\Pages\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T13:51:29.977Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
